@@ -1,0 +1,41 @@
+<div id="wrapper">
+<form id="form-connexion" class="form-authentification" novalidate>
+    <fieldset id="fielsetform">
+        
+        <legend>
+            Récupérer Mot de passe
+        </legend>
+
+        <div id="zoneEmail">
+            <p>Saisir votre Email</p>
+        <label for="input-courriel">
+            <input class="test" type="email" placeholder="Courriel" id="input-courriel" required>
+            <div id="courrielErrorconn" class="error"></div>
+        </label>
+        <input type="button" value="valider" id="connexionEmail">
+        </div>
+
+        <div id ="zoneCode">
+            <p>veuillez Entrer le code de sécurité</p>
+        <label for="input-mot-de-passe">
+            <input class="test" type="text" placeholder="code de sécurité" id="input-code" required>
+            <div id="codeErrorconn" class="error"></div>
+        </label>
+        <input type="button" value="valider" id="connexionCode" >
+       </div>
+
+       <div id ="zonemdp">
+        <p>nouveau mot de passe</p>
+        <label for="input-mot-de-passe">
+            <input class="test" type="password" placeholder="nv mot de passe" id="input-mdp" required>
+            <div id="mdpErrorconn" class="error"></div>
+        </label>
+        <input type="button" value="valider" id="connexionmdp" >
+       </div>
+
+        <div id ="zoneSucces">
+            <p class="messageSucces">Votre mot de passe a été bien modifier</p>
+        </div>
+    </fieldset>
+</form>
+</div>

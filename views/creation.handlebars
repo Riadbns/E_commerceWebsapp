@@ -1,0 +1,64 @@
+<div id="wrapper">
+<form id="formCreation" novalidate>
+    <fieldset id="fielsetform">
+        <legend>Création du compte utilisateur</legend>
+        <div id="erreur" class=" erreur">
+
+        </div>
+
+        <label> 
+            <input  class="test" type="text" placeholder="Nom" id="nomUser" required>
+            <div id="nomError" class="error"></div>
+        </label>
+        <label> 
+            <input  class="test" type="text" placeholder="Prénom" id="prenomUser" required>
+            <div id="prenomError" class="error"></div>
+        </label>
+        <label> 
+            <input class="test" type="text" placeholder="Adresse" id="adresseUser" required>
+            <div id="adresseError" class="error"></div>
+        </label>
+
+        <label> 
+            <input class="test" type="text" placeholder="Ville" id="villeUser" required>
+            <div id="villeError" class="error"></div>
+        </label>
+
+        <label> 
+            <select class="test" id="provinceUser" required>
+                <option value="" disabled selected>Province/Territoire</option>
+                <option value="Alberta">Alberta</option>
+                <option value="Colombie-Britannique">Colombie-Britannique</option>
+                <option value="Île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
+                <option value="Manitoba">Manitoba</option>
+                <option value="Nouveau-Brunswick">Nouveau-Brunswick</option>
+                <option value="Nouvelle-Écosse">Nouvelle-Écosse</option>
+                <option value="Ontario">Ontario</option>
+                <option value="Québec">Québec</option>
+                <option value="Saskatchewan">Saskatchewan</option>
+                <option value="Terre-Neuve-et-Labrador">Terre-Neuve-et-Labrador</option>
+                <option value="Territoires du Nord-Ouest">Territoires du Nord-Ouest</option>
+                <option value="Yukon">Yukon</option>
+            </select>
+            <div id="provinceError" class="error"></div>
+        </label>
+        <label> 
+            <input class="test" type="text" placeholder="Code postal" id="codePostalUser" required>
+            <div id="codePostalError" class="error"></div>
+        </label>
+        <label> 
+            <input  class="test" type="email" name="" placeholder="Adresse Email" id="courrielUser" required>
+            <div id="courrielError" class="error"></div>
+
+        </label>
+        <label>
+            <input class="test" type="password" name="" placeholder="Mot de passe" id="passwordUser" required>
+            <div id="passwordError" class="error"></div>
+
+        </label>
+
+
+        <input type="submit" id="soumettreuser" value="Créer un compte ">
+    </fieldset>
+</form>
+</div>

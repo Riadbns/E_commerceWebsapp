@@ -1,0 +1,125 @@
+<div class="marquee">
+  <div class="marquee-content">
+    <div class="marquee-item">
+      <img src="../produits/brand-01.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-02.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-03.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-04.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-05.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-06.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-07.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-08.png" alt="">
+    </div>
+
+
+
+
+
+
+
+    <div class="marquee-item">
+      <img src="../produits/brand-01.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-02.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-03.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-04.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-05.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-06.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-07.png" alt="">
+    </div>
+
+    <div class="marquee-item">
+      <img src="../produits/brand-08.png" alt="">
+    </div>
+  </div>
+</div>
+<div class="Divcontainers">
+  <div class="divone">
+    <p><span style="color:#bf4800; font-size: 30px;">L'univers de Technoshop</span> </p>
+    <div>
+      <p><span>Un shopping en ligne facile et pratique</span> </p>
+      <p><span>Un univers de choix à portée de clic.</span> </p>
+    </div>
+
+  </div>
+  <div class="divtwo">
+    <div class="produit" style="background-image: url(../produits/catbanner-01.jpg);">
+      <p style="color:#bf4800">MEILLEUR CHOIX</p>
+      <p><span>MacBook Pro</span></p>
+      <p>A partir de 1546.99 $</p>
+    </div>
+    <div class="produit" style="background-image: url(../produits/catbanner-02.jpg);">
+      <p style="color:#bf4800">MEILLEUR CHOIX</p>
+      <p><span>Smart Watch</span></p>
+      <p>A partir de 89.99 $</p>
+    </div>
+    <div class="produit" style="background-image: url(../produits/catbanner-03.jpg);">
+      <p style="color:#bf4800">MEILLEUR CHOIX</p>
+      <p><span>Apple iPad</span></p>
+      <p>A partir de 223.99 $</p>
+    </div>
+    <div class="produit" style="background-image: url(../produits/catbanner-04.jpg);">
+      <p style="color:#bf4800">MEILLEUR CHOIX</p>
+      <p><span>Apple Headphones</span></p>
+      <p>A partir de 359.99 $</p>
+    </div>
+  </div>
+</div>
+<div id="wrapper">
+  {{#each activities}}
+  <div class="card-magasinger divproduit">
+    <img src="data:image/png;base64,{{this.image}}" alt="{{this.nom}}" class="image" />
+    <div class="divproduit-item">
+      <h2 id="activitie" class="nomsearch"> {{this.nom}}</h2>
+      <div id="description">{{this.description}}</div>
+      <p id="categorie" class="categorie"><span>Catégorie:</span> {{this.categorie}}</p>
+      <p id="capacite"><span class="heading">Prix : </span> {{this.prix}} $</p>
+      {{#if this.inscrit }}
+      <input id="inscireActivitie" type="submit" data-id="{{this.id_produit}}" value="{{this.messageValue}}" disabled />
+      {{else}}
+      <input id="inscireActivitie" type="submit" data-id="{{this.id_produit}}" data-nb_produit="{{this.nb_produit}}"
+        value="Ajouter au panier" />
+      {{/if}}
+    </div>
+  </div>
+  {{/each}}
+
+</div>

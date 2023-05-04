@@ -1,0 +1,69 @@
+<div id="wrapper">
+    {{#each activities}}
+    <div class="card ">
+
+        <h2 id="activitie" class="nomsearch" style="padding-top: 20px;"> {{this.nom}}</h2>
+        <p id="description"><span>Discription: </span> {{this.description}}</p>
+        <p id="categorie" class="categorie"><span> Catégorie:</span>{{this.categorie}}</p>
+        <div class="quantite-admin">
+            <p id="capacite" > <span>Quantité: </span></p>
+            <div >{{this.quantite}}</div>
+            <h4 class="notification-admin {{this.styleMessage}}">{{this.messageNotification}}</h4>
+            
+        </div>
+        <p id="capacite"><span> Prix : </span> {{this.prix}}$</p>
+        <p>Dans le panier de : </p>
+
+        <select id="listeUtilisateurs" size="5">
+
+            {{#each utilisateurs}}
+            <option value="{{this.id_utilisateur}}" disabled>{{this.nom}} {{this.prenom}} </option>
+            {{/each}}
+        </select>
+
+        <!-- -->
+        <input id="supprimerActivitie" type="submit" data-id="{{this.id_produit}}" value="Supprimer" />
+    </div>
+    {{/each}}
+</div>
+<div class="form">
+    <form id="formActivitie" novalidate enctype="multipart/form-data">
+        <fieldset id="fielsetform">
+            <legend>Ajouter Un Produit</legend>
+
+            <label>
+                <input class="test" type="text" id="nomActivitie" placeholder="Nom Produit" >
+                <div id="nomError" class="error"></div>
+            </label>
+            <label>
+                <select class="test" id="categorieInsert" >
+                    {{#each categories}}
+                    <option value="{{this.nom_categorie}}">{{this.nom_categorie}}</option>
+                    {{/each}}
+                </select>
+                <div id="nomError" class="error"></div>
+            </label>
+            <label>
+                <input class="test" id="imageUpload" type="file" name="image"  accept="image/*">
+                <div id="imageError" class="error"></div>
+            </label>
+            <label>
+                <textarea class="test" id="descriptionActivitie" cols="40" rows="8"
+                    placeholder="desctiption d'un produit" minlength="10" maxlength="500"></textarea>
+                <div id="descriptionError" class="error"></div>
+            </label>
+
+            <label>
+                <input class="test" type="number" id="capaciteActivitie" placeholder="Quantite" min="1">
+                <div id="capaciteError" class="error"></div>
+            </label>
+
+            <label>
+                <input class="test" type="number" id="nbrActivitie" pattern="[0-9]+(\.[0-9]+)?" placeholder="Price" min="1">
+                <div id="nbrActiviteError" class="error"></div>
+            </label>
+
+            <input type="submit" id="Soumettre" value="Ajouter produit">
+        </fieldset>
+    </form>
+</div>

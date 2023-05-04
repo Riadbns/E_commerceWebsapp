@@ -1,0 +1,88 @@
+<div class="items-continer">
+  <div class="cart-header">
+    <div class="headOfcart">
+      <h4 class="cart-col">Produit</h4>
+      <h4 class="cart-col">Prix</h4>
+      <h4 class="cart-col">Quantité</h4>
+      <h4 class="cart-col">Total</h4>
+      <span></span>
+    </div>
+    {{#each activitiesUser}}
+      <div class="bodyofcart">
+        <div class="img-nom-desc">
+          <img
+            class="cart-img"
+            src="data:image/png;base64,{{this.image}}"
+            alt="{{this.nom}}"
+          />
+          <div>
+            <p id="activitie">{{this.nom}}</p>
+
+          </div>
+        </div>
+        <p  class="prix-cart"><span id="nbreInscrit">{{this.prix}}</span> $</p>
+        <div class="quantite-cart">
+          <p id="nbCours">{{this.nb_produit}}</p>
+          <div class="plusETmoins">
+            {{#if this.eglaaSexty}}
+              <input id="addquantite" type="submit" value="+" disabled />
+            {{else}}
+              <input
+                id="addquantite"
+                type="submit"
+                data-id="{{this.id_produit}}"
+                data-nb_produit="{{this.nb_produit}}"
+                value="+"
+              />
+            {{/if}}
+
+            {{#if this.eglaaOne}}
+              <input id="decrisequantite" type="submit" value="-" disabled />
+            {{else}}
+              <input
+                id="decrisequantite"
+                data-id="{{this.id_produit}}"
+                data-nb_produit="{{this.nb_produit}}"
+                type="submit"
+                value="-"
+              />
+            {{/if}}
+          </div>
+
+        </div>
+        <div>
+          <p>{{this.total_produit}} $</p>
+        </div>
+        <div>
+          <button
+            id="desinscireActivitie"
+            type="submit"
+            data-id="{{this.id_produit}}"
+          >
+
+            <i class="fa fa-trash-o" style="  font-size: 35px; color: red;"></i>
+          </button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="fetch">
+
+    <a href="/activitie"><input
+        id="goshopping"
+        type="submit"
+        value="continuez vos achats"
+      /></a>
+    <div class="payementCard">
+      <h3 style="margin: 0;">Sous-total :<span id="price"> {{total}}</span>
+        $</h3>
+      <p>Taxes et livraison calculées et incluses</p>
+      <input id="checkout" class="payerButton" type="submit" value="Payer" />
+    </div>
+
+  </div>
+
+
+
+</div>
+
